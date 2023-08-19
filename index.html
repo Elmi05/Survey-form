@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Survey Form</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+  }
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: lightblue;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  label {
+    font-weight: bold;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+#submit {
+  background-color: #83cf86;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 100%;
+}
+#submit:hover {
+  background-color: #45a049;
+}
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1 id="title">Somali Books Survey</h1>
+    <p id="description">Please take a few minutes to complete this survey.</p>
+    <form id="survey-form">
+      <label for="name" id="name-label">Name:</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+      
+      <label for="email" id="email-label">Email:</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+      
+      <label for="number" id="number-label">Number:</label>
+      <input type="number" id="number" placeholder="Enter a number" min="1" max="10" required>
+      
+      <label for="dropdown">Favorite Book Genres:</label>
+      <select id="dropdown">
+        <option value="option1">Novels</option>
+        <option value="option2">History</option>
+        <option value="option1">Poetry</option>
+        <option value="option2">Fiction</option>
+        <option value="option1"> Self-Help</option>
+        <option value="option2"> Religious/Spiritual</option>
+
+      </select>
+      
+      <label> How often do you read books?</label> <br>
+      <input type="radio" name="radio-group" value="radio1">  Daily<br>
+      <input type="radio" name="radio-group" value="radio2">  Several times a week<br>
+      <input type="radio" name="radio-group" value="radio1"> Once a week <br>
+      <input type="radio" name="radio-group" value="radio2"> Rarely<br> <br>
+      
+      
+      <label>Do you read Somali books?</label> <br>
+      <input type="checkbox" name="checkbox-group" value="checkbox1"> Yes <br>
+      <input type="checkbox" name="checkbox-group" value="checkbox2"> No <br> <br>
+      
+      <label for="comments">Do you have any specific recommendations for Somali books or authors that you think others might enjoy? Please share below:</label>
+      <textarea id="comments" placeholder="Enter your comments"></textarea>
+
+      
+      <input type="submit" id="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>
